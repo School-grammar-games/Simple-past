@@ -168,7 +168,7 @@ const buttonLabels = {
   'The correct simple past of “to come”': ['came', 'comed'],
   'The correct simple past of “to pay”': ['payed', 'paid'],
   'The correct simple past of “to sit”': ['sat', 'sitted'],
-  'The correct simple past of “to lie”': ['lied', 'lay'],
+  'The correct simple past of “to lie”': ['lay', 'lied'],
   'The correct simple past of “to light”': ['lit', 'lighted'],
   'The correct simple past of “to spread”': ['spready', 'spread']
 };
