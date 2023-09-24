@@ -106,21 +106,12 @@ const speechBubbles = {
   'The correct simple past of “to sit”': 'yes-button',
   'The correct simple past of “to lie”': 'no-button',
   'The correct simple past of “to light”': 'yes-button',
-  'The correct simple past of “to spread”': 'no-button',
-  'The correct simple past of “to bring”': 'yes-button',
-  'The correct simple past of “to shoot”': 'no-button',
-  'The correct simple past of “to sting”': 'yes-button',
-  'The correct simple past of “to bleed”': 'no-button',
-  'The correct simple past of “to breed”': 'yes-button',
-  'The correct simple past of “to swing”': 'no-button',
-  'The correct simple past of “to fling”': 'yes-button',
-  'The correct simple past of “to wring”': 'no-button',
-  'The correct simple past of “to strive”': 'yes-button'
+  'The correct simple past of “to spread”': 'no-button'
 };
 
 const buttonLabels = {
   'Du siehst nun zwei Lösungsmöglichkeiten. Klicke auf "Richtig" um die Beispiele anzuzeigen.': ['Richtig', 'Falsch'],
-  'The correct simple past of “to walk”': ['walked', 'walky'],
+  'The correct simple past of “to walk”': ['walked', 'walken'],
   'The correct simple past of “to sing”': ['singed', 'sang'],
   'The correct simple past of “to dance”': ['danced', 'dancen'],
   'The correct simple past of “to read”': ['readed', 'read'],
@@ -128,7 +119,7 @@ const buttonLabels = {
   'The correct simple past of “to swim”': ['swimmed', 'swam'],
   'The correct simple past of “to drive”': ['drove', 'drived'],
   'The correct simple past of “to eat”': ['eated', 'ate'],
-  'The correct simple past of “to play”': ['played', 'playen'],
+  'The correct simple past of “to play”': ['played', 'plaid'],
   'The correct simple past of “to drink”': ['drinked', 'drank'],
   'The correct simple past of “to speak”': ['spoke', 'speaked'],
   'The correct simple past of “to break”': ['breaked', 'broke'],
@@ -141,8 +132,8 @@ const buttonLabels = {
   'The correct simple past of “to wear”': ['wore', 'weared'],
   'The correct simple past of “to fly”': ['flied', 'flew'],
   'The correct simple past of “to draw”': ['drew', 'drawed'],
-  'The correct simple past of “to climb”': ['climby', 'climbed'],
-  'The correct simple past of “to smile”': ['smiled', 'smiley'],
+  'The correct simple past of “to climb”': ['climbt', 'climbed'],
+  'The correct simple past of “to smile”': ['smiled', 'smilen'],
   'The correct simple past of “to shout”': ['shouten', 'shouted'],
   'The correct simple past of “to shake”': ['shook', 'shaked'],
   'The correct simple past of “to jump”': ['jumpt', 'jumped'],
@@ -157,11 +148,11 @@ const buttonLabels = {
   'The correct simple past of “to tell”': ['told', 'telled'],
   'The correct simple past of “to meet”': ['meeted', 'met'],
   'The correct simple past of “to hold”': ['held', 'holded'],
-  'The correct simple past of “to dream”': ['dreamen', 'dreamed/dreamt'],
+  'The correct simple past of “to dream”': ['dreamen', 'dreamed'],
   'The correct simple past of “to hurt”': ['hurt', 'hurten'],
   'The correct simple past of “to fall”': ['falled', 'fell'],
   'The correct simple past of “to laugh”': ['laughed', 'laughen'],
-  'The correct simple past of “to listen”': ['listeny', 'listened'],
+  'The correct simple past of “to listen”': ['listen', 'listened'],
   'The correct simple past of “to grow”': ['grew', 'growed'],
   'The correct simple past of “to choose”': ['choosed', 'chose'],
   'The correct simple past of “to know”': ['knew', 'knowed'],
@@ -179,16 +170,7 @@ const buttonLabels = {
   'The correct simple past of “to sit”': ['sat', 'sitted'],
   'The correct simple past of “to lie”': ['lay', 'lied'],
   'The correct simple past of “to light”': ['lit', 'lighted'],
-  'The correct simple past of “to spread”': ['spready', 'spread'],
-  'The correct simple past of “to bring”': ['brought', 'bringed'],
-  'The correct simple past of “to shoot”': ['shooted', 'shot'],
-  'The correct simple past of “to sting”': ['stung', 'stinged'],
-  'The correct simple past of “to bleed”': ['bleeded', 'bled'],
-  'The correct simple past of “to breed”': ['bred', 'breeded'],
-  'The correct simple past of “to swing”': ['swinged', 'swung'],
-  'The correct simple past of “to fling”': ['flung', 'flinged'],
-  'The correct simple past of “to wring”': ['wringed', 'wrung'],
-  'The correct simple past of “to strive”': ['strove', 'strived']
+  'The correct simple past of “to spread”': ['spreaden', 'spread']
 };
 
 function chooseBubble() {
@@ -353,6 +335,11 @@ function updateScoreDisplay() {
     imageElement.setAttribute('src', 'Transition_images/5to6world.png');
     document.querySelector('.game-container').appendChild(imageElement);
     addContinueButton(5600);
+  } else if (score === 7000) {
+    const imageElement = document.createElement('img');
+    imageElement.setAttribute('src', 'Finish_images/Final_win.png');
+    document.querySelector('.game-container').appendChild(imageElement);
+    addContinueButton(5600);
   }
 }
 
@@ -416,7 +403,7 @@ function showGameOverImage() {
 
 function showWinGameImage() {
   const winGameImage = document.createElement('img');
-  winGameImage.setAttribute('id', 'winGameImage');
+  winGameImage.setAttribute('src','Finish_images/F_char_win.png');
 
   if (selectedCharacter === 'F_char') {
     winGameImage.setAttribute('src', 'Finish_images/F_char_win.png');
@@ -486,7 +473,7 @@ function resetGame() {
   noButton.textContent = 'No';
   yesButton.style.display = 'block';
   noButton.style.display = 'block';
-  speechBubble.textContent = 'Hello! Welcome to the game! To continue you need to choose the present perfect or the simple past. Here\'s the first task, are you ready?';
+  speechBubble.textContent = 'Hello! Welcome to the game! To continue you need to choose the correct simple past form for each verb. Here\'s the first task, are you ready?';
 
   resetUsedKeys(); // Add this line to reset usedKeys array when the game is reset
   isGameRunning = false;
