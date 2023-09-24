@@ -106,7 +106,16 @@ const speechBubbles = {
   'The correct simple past of “to sit”': 'yes-button',
   'The correct simple past of “to lie”': 'no-button',
   'The correct simple past of “to light”': 'yes-button',
-  'The correct simple past of “to spread”': 'no-button'
+  'The correct simple past of “to spread”': 'no-button',
+  'The correct simple past of “to bring”': 'yes-button',
+  'The correct simple past of “to shoot”': 'no-button',
+  'The correct simple past of “to sting”': 'yes-button',
+  'The correct simple past of “to bleed”': 'no-button',
+  'The correct simple past of “to breed”': 'yes-button',
+  'The correct simple past of “to swing”': 'no-button',
+  'The correct simple past of “to fling”': 'yes-button',
+  'The correct simple past of “to wring”': 'no-button',
+  'The correct simple past of “to strive”': 'yes-button'
 };
 
 const buttonLabels = {
@@ -170,7 +179,16 @@ const buttonLabels = {
   'The correct simple past of “to sit”': ['sat', 'sitted'],
   'The correct simple past of “to lie”': ['lay', 'lied'],
   'The correct simple past of “to light”': ['lit', 'lighted'],
-  'The correct simple past of “to spread”': ['spready', 'spread']
+  'The correct simple past of “to spread”': ['spready', 'spread'],
+  'The correct simple past of “to bring”': ['brought', 'bringed'],
+  'The correct simple past of “to shoot”': ['shooted', 'shot'],
+  'The correct simple past of “to sting”': ['stung', 'stinged'],
+  'The correct simple past of “to bleed”': ['bleeded', 'bled'],
+  'The correct simple past of “to breed”': ['bred', 'breeded'],
+  'The correct simple past of “to swing”': ['swinged', 'swung'],
+  'The correct simple past of “to fling”': ['flung', 'flinged'],
+  'The correct simple past of “to wring”': ['wringed', 'wrung'],
+  'The correct simple past of “to strive”': ['strove', 'strived']
 };
 
 function chooseBubble() {
